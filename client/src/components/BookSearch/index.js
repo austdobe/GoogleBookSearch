@@ -30,6 +30,8 @@ function BookSearch(){
         axios.get("https://www.googleapis.com/books/v1/volumes?q="+book+"&key="+APIKey+"&maxResults=40")
         .then(data =>{
             setResults(data.data.items);
+            console.log(data.data.items)
+            return results;
         })
 
     };
@@ -63,6 +65,19 @@ function BookSearch(){
                     Search</button>
                 </div>
             </form>
+            <div className='container' style={styling.container}>
+                <div className='card' style={styling.books}>
+                {
+                    results.map(book =>(
+                        <div>
+                            <a href={book.volumeInfo.previewLink}className='cardHeader'>{book.volumeInfo.title}</a>
+                            <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/>
+                            <p>{book.volumeInfo.description}</p>
+                        </div>
+                    ))
+                } 
+                </div>   
+            </div>
         </div>      
     )
 }

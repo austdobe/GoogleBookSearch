@@ -1,6 +1,5 @@
 import React from 'react'
 import BookSearch from '../BookSearch'
-import BookResults from '../BookResults'
 const styling = {
     header:{
         backgroundColor: '#F8B195',
@@ -16,18 +15,18 @@ const styling = {
 function MainContainer(){
     return(
         <div>
-            <nav class="navbar navbar-expand-lg " style={styling.header}>
-                <a class="navbar-brand" href="#">Google Book Search</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg " style={styling.header}>
+                <a className="navbar-brand" href="#">Google Book Search</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Saved Books</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Saved Books</a>
                         </li>
                     </ul>
                 </div>
@@ -38,10 +37,6 @@ function MainContainer(){
                         <p>Enter a book name or author you are interested in.</p>
                     </div>
                     <BookSearch />
-                </div>
-                <div className="card" style={styling.content}>
-                    
-                    <BookResults />
                 </div>
             </div>
         </div>
