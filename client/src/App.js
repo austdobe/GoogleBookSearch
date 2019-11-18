@@ -3,7 +3,7 @@ import MainContainer from './components/MainContainer'
 const styling ={
   App:{
     backgroundColor: '#6c5b7b',
-    height: "100vh"
+    minHeight: "100vh"
   }
 }
 

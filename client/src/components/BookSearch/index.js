@@ -6,6 +6,17 @@ const styling={
         margin: "20px auto",
         width: '100%'
     },
+    books: {
+        margin: "10px 20px",
+        padding: "10px 20px",
+        backgroundColor: "#929195",
+        color: "black"
+    },
+    cardImage:{
+        maxHeight: '200',
+        maxWidth: '200px',
+        margin: '10px auto'
+    }
 
 }
 
@@ -35,6 +46,9 @@ function BookSearch(){
         })
 
     };
+    function handleClick(event){
+        
+    }
 
     return(
         <div className="container">
@@ -48,16 +62,6 @@ function BookSearch(){
                     onChange={handleChange}></input>
                 </div>
                 <div>
-                    <h4> Or </h4>
-                </div>
-                <div>
-                    <input 
-                    style={styling.searchbar}
-                    type='text'
-                    name='search'
-                    placeholder="Author Name"></input>
-                </div>
-                <div>
                     <button 
                     type="submit"
                     className="btn btn-primary"
@@ -66,17 +70,22 @@ function BookSearch(){
                 </div>
             </form>
             <div className='container' style={styling.container}>
-                <div className='card' style={styling.books}>
                 {
                     results.map(book =>(
-                        <div>
-                            <a href={book.volumeInfo.previewLink}className='cardHeader'>{book.volumeInfo.title}</a>
-                            <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/>
+                        <div className='card' style={styling.books}>
+                            <a
+                            style={{color: "black"}} 
+                            href={book.volumeInfo.previewLink}className='card-header'>{book.volumeInfo.title}</a>
+                            <img 
+                            style={styling.cardImage}
+                            src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/>
                             <p>{book.volumeInfo.description}</p>
+                            <button type="button"
+                            onClick={handleClick}>Save</button>
                         </div>
                     ))
                 } 
-                </div>   
+                  
             </div>
         </div>      
     )
