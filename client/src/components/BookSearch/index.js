@@ -24,7 +24,7 @@ function BookSearch(){
 
     const [book, setBook] = useState('');
     const [results, setResults] = useState([]);
-    const [APIKey, setAPIKey] = useState('AIzaSyDz2jlBCa3uarUkN6NL7pia07KhtHKGEBc');
+    const [APIKey] = useState('AIzaSyDz2jlBCa3uarUkN6NL7pia07KhtHKGEBc');
 
     function handleChange(event){
 
