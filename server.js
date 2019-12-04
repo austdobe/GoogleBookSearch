@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -10,6 +11,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds229088.mlab.com:29088/heroku_tp7zfp5m";
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/googlebooks"
