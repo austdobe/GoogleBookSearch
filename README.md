@@ -12,9 +12,9 @@
 ## Technologies used
 This project was created with:
 
+* React
 * NodeJS 
 * ExpressJS
-* Express Handlebars
 * Mongo
 * Mongoose
 * JavaScript
@@ -22,8 +22,6 @@ This project was created with:
 * Bootstrap CSS
 * HTML
 * CSS
-
-
 
 ## Deployed Site: 
 #### https://dashboard.heroku.com/apps/googlebooks2019
