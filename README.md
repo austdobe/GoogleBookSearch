@@ -20,7 +20,7 @@ This project was created with:
 * JavaScript
 * jQuery
 * Bootstrap CSS
-* HTML
+* JSX
 * CSS
 
 ## Deployed Site: 
